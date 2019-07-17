@@ -42,6 +42,7 @@ def main():
         ('d', 'describe', None, None),
         ('rm', 'delete', None, None),
         ('run', 'run --rm --restart=Never --image-pull-policy=IfNotPresent -i -t', None, None),
+        ('pf', 'port-forward', None, None),
         ]
 
     res = [
@@ -53,6 +54,8 @@ def main():
         ('sec', 'secret', ['g', 'd', 'rm'], None),
         ('no', 'nodes', ['g', 'd'], ['sys']),
         ('ns', 'namespaces', ['g', 'd', 'rm'], ['sys']),
+        ('vs', 'virtualservice', ['g', 'd', 'rm'], None),
+        ('gw', 'gateway', ['g', 'd', 'rm'], None),
         ]
     res_types = [r[0] for r in res]
 
